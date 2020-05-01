@@ -1,27 +1,31 @@
 {
-    "name": "zone-mta-template",
-    "private": true,
-    "version": "1.0.2",
-    "description": "ZoneMTA example application",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js --config=config/zonemta.toml",
-        "config": "NODE_CONFIG_ONLY=true npm start"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/zone-eu/zone-mta-template.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/zone-eu/zone-mta-template/issues"
-    },
-    "homepage": "https://github.com/zone-eu/zone-mta-template#readme",
-    "dependencies": {
-        "zone-mta": "^1.1.0-beta.4",
-        "zonemta-delivery-counters": "^1.0.1",
-        "zonemta-loop-breaker": "^1.0.2"
-    }
+  "name": "zone-mta-template",
+  "private": true,
+  "version": "1.0.2",
+  "description": "ZoneMTA example application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --config=config/zonemta.toml",
+    "config": "NODE_CONFIG_ONLY=true npm start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zone-eu/zone-mta-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zone-eu/zone-mta-template/issues"
+  },
+  "homepage": "https://github.com/zone-eu/zone-mta-template#readme",
+  "dependencies": {
+    "zone-mta": "^1.1.0-beta.4",
+    "zonemta-delivery-counters": "^1.0.1",
+    "zonemta-loop-breaker": "^1.0.2",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
